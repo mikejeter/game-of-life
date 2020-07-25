@@ -93,7 +93,7 @@ class Game extends React.Component {
     runGame = () => {
         this.setState({ isRunning: true });
         this.runIteration();
-    }
+    };
 
     stopGame = () => {
         this.setState({ isRunning: false });
@@ -101,7 +101,7 @@ class Game extends React.Component {
             window.clearTimeout(this.timeoutHandler);
             this.timeoutHandler = null;
         }
-    }
+    };
 
     runIteration() {
         let newBoard = this.makeEmptyBoard();
@@ -155,12 +155,12 @@ class Game extends React.Component {
 
     handleIntervalChange = (event) => {
         this.setState({ interval: event.target.value });
-    }
+    };
 
     handleClear = () => {
         this.board = this.makeEmptyBoard();
         this.setState({ cells: this.makeCells() });
-    }
+    };
 
     handleRandom = () => {
         for (let y = 0; y < this.rows; y++) {
@@ -170,7 +170,7 @@ class Game extends React.Component {
         }
 
         this.setState({ cells: this.makeCells() });
-    }
+    };
 
 
 
